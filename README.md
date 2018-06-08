@@ -7,6 +7,7 @@
 >>文件夹`windows_client`实现的是Windows作为client端实现Windows实现传输字符串和文件，其中Windows_client.cpp是对应用来实现传输字符串的，Windowsclient_file.cpp是对应用来实现传输文件的，均可在VS2015下运行，运行时可按“e”退出。<br><br>
 >Linux与Windows之间进行TCP通信时，传输字符串实现了client端输入字符串，server端接收数据；传输文件实现了server端上传文件，client端接收文件。
 <br>
+## 一些小小的总结
 >看了诸多参考资料，结合这些资料总结一下C socket编程的通用点：<br>
 >>Server端：用socket()创建套接字->用bind()绑定套接字->用listen()将套接字设为监听状态准备接收客户请求->用accept()等待并接收客户请求并返回一个对应此连接的套接字->用返回的套接字与客户进行通信send()/recv()->最后用close()关闭连接，等待另一客户请求。在这里的accept()默认使用的是阻塞方式。
 >>Client端：用socket()创建套接字->用connect()向服务器发起连接请求->和服务器进行通信send()/recv()->用close()关闭套接字。本实验实现了在Linux下开两个终端进行通信以及Linux与Windows间的通信，由于以上通用点，这些代码有很多共通的地方。
