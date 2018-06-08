@@ -1,5 +1,6 @@
 # TCP-socket_Exp2
 # 计算机网络实验二  by何明栩
+>实验环境：Ubuntu 16.04 LTS GCC编译器（Linux）、Microsoft Visual Studio 2015（Windows）、使用C语言进行 socket编程。
 >本次实验共有四个文件夹:<br>
 >>文件夹`tcp_socket`中实现的是Linux内server端与client端传输字符串，运行时只需要分别输入./server和./client即可。<br><br>
 >>文件夹`file_transfer`中实现的是Linux内server端与client端传输文件，运行时需要注意的是，server端运行时需要指定端口号与需要保存的文件，此文件可以是存在的文件也可以是不存在的文件./file_server <端口号> <需要保存的文件名>、client端：运行时需要指定ip地址、端口号与需要上传的文件./file_client <ip地址> <端口号> <需要上传的文件名>。里面的file1.txt和file2.txt为需要上传的测试文件；<br><br>
